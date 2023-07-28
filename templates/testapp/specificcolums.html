@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+{% extends 'testapp/base.html' %}
+{% block body_block %}
+<h1>Welcome to Employee List</h1><hr>
+<table border="3">
+  <thead>
+    <th>Employee Number</th>
+    <th>Employee Name</th>
+  </thead>
+  {% for emp in emp_list %}
+    <tr>
+      <td>{{emp.ename}}</td>
+      <td>{{emp.esal}}</td>
+    </tr>
+  {% endfor %}
+</table>
+{% endblock %}
